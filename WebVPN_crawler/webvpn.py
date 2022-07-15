@@ -1,3 +1,5 @@
+import time
+
 from selenium.webdriver.remote.webdriver import WebDriver as wd
 from selenium.webdriver.chrome.service import Service as ChromeService
 from webdriver_manager.chrome import ChromeDriverManager
@@ -8,13 +10,17 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.action_chains import ActionChains as AC
 import selenium
 from bs4 import BeautifulSoup as BS
+from IPython import embed
+import json
+import re
+
 
 class WebVPN:
     def __init__(self, opt: dict, headless=False):
         self.root_handle = None
         self.driver: wd = None
-        self.passwd = opt["username"]
-        self.userid = opt["password"]
+        self.userid = opt["username"]
+        self.passwd = opt["password"]
         self.headless = headless
 
     def login_webvpn(self):
@@ -55,11 +61,11 @@ class WebVPN:
         actions = AC(d)
         actions.move_to_element(d.find_element(*url))
         actions.click()
-        actions.\
-            key_down(Keys.CONTROL).\
-            send_keys("A").\
-            key_up(Keys.CONTROL).\
-            send_keys(Keys.DELETE).\
+        actions. \
+            key_down(Keys.CONTROL). \
+            send_keys("A"). \
+            key_up(Keys.CONTROL). \
+            send_keys(Keys.DELETE). \
             perform()
 
         d.find_element(*url)
@@ -110,37 +116,85 @@ class WebVPN:
 
         :return:
         """
+        self.access("info.tsinghua.edu.cn")
+        self.switch_another()
+        d = self.driver
+        username = By.ID, "userName"
+        # print(username)
+        wdw(d, 10).until(EC.visibility_of_element_located(username))
+        password = By.NAME, "password"
+        # print(password)
+        wdw(d, 10).until(EC.visibility_of_element_located(password))
+
+        username = d.find_element(*username)
+        password = d.find_element(*password)
+        btn = d.find_element(By.CLASS_NAME, "but")
+        btn = btn.find_element(By.TAG_NAME, "input")
+
+        username.send_keys(str(self.userid))
+        password.send_keys(self.passwd)
+        btn.click()
+
+        time.sleep(3)  # make sure you're logged in
+        self.driver.close()
 
         # Hint: - Use `access` method to jump to info.tsinghua.edu.cn
         #       - Use `switch_another` method to change the window handle
         #       - Wait until the elements are ready, then preform your actions
         #       - Before return, make sure that you have logged in successfully
-        raise NotImplementedError
 
     def get_grades(self):
-        """
-        TODO: Get and calculate the GPA for each semester.
 
-        Example return / print:
+        self.access("zhjw.cic.tsinghua.edu.cn/cj.cjCjbAll.do?m=bks_cjdcx&cjdlx=zw")
+        time.sleep(1)
+        self.switch_another()
+
+        d = self.driver
+        html = d.find_elements(By.TAG_NAME, "tbody")[3].get_attribute("innerHTML")
+        soup = BS(html, "html.parser")
+        courses = soup.find_all("tr")
+        courses_info = []
+
+        for course in courses[1:]:
+            gpa = re.search("\d\.\d", course.find_all("td")[4].contents[0])
+            if gpa is None:
+                gpa = "N/A"
+            else:
+                gpa = gpa.group()
+            course_info = {
+                "course_name": course.find_all("td")[1].contents[0],
+                "course_grade": gpa
+            }
+            courses_info.append(course_info)
+
+        for course in courses_info:
+            print(course["course_name"], ": ", course["course_grade"])
+
+        return courses_info
+
+        """
+        Get and calculate the GPA for each semester.
+        
+        Example print:
             2020-秋: *.**
             2021-春: *.**
             2021-夏: *.**
             2021-秋: *.**
             2022-春: *.**
 
-        :return:
+        return:
+        [{'course_name': '数字娱乐中的媒体技术', 'course_point': '1.0'}, {'course_name': '微积分A(1)', 'course_point': '2.3'}]
         """
 
-        # Hint: - You can directly switch into
-        #         `zhjw.cic.tsinghua.edu.cn/cj.cjCjbAll.do?m=bks_cjdcx&cjdlx=zw`
-        #         after logged in
-        #       - You can use Beautiful Soup to parse the HTML content or use
-        #         XPath directly to get the contents
-        #       - You can use `element.get_attribute("innerHTML")` to get its
-        #         HTML code
-
-        raise NotImplementedError
 
 if __name__ == "__main__":
     # TODO: Write your own query process
-    raise NotImplementedError
+    with open("settings.json", "r", encoding="utf8") as f:
+        settings = json.load(f)  # Load settings
+
+    w = WebVPN(settings)
+    w.login_webvpn()
+    print("here")
+    w.login_info()
+    w.to_root()
+    w.get_grades()

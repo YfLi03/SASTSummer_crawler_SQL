@@ -26,6 +26,10 @@ logger.addHandler(console)
 
 
 class ZhihuCrawler:
+    """
+    爬取知乎热榜信息
+    采用了与提示中不同的接口, 获得信息可能有所出入
+    """
     def __init__(self):
         with open("zhihu.json", "r", encoding="utf8") as f:
             self.settings = json.load(f)  # Load settings
