@@ -1,0 +1,726 @@
+2022-07-15 10:27:00.039 [INFO] Settings loaded
+2022-07-15 10:31:37.855 [INFO] Settings loaded
+2022-07-15 10:31:56.491 [INFO] Settings loaded
+2022-07-15 10:32:09.837 [INFO] Settings loaded
+2022-07-15 10:32:17.512 [INFO] Settings loaded
+2022-07-15 10:32:25.601 [INFO] Settings loaded
+2022-07-15 10:33:30.476 [INFO] Settings loaded
+2022-07-15 10:35:21.130 [INFO] Settings loaded
+2022-07-15 10:41:25.795 [INFO] Settings loaded
+2022-07-15 10:51:11.811 [INFO] Settings loaded
+2022-07-15 10:51:11.949 [INFO] Begin crawling ...
+2022-07-15 10:51:11.965 [ERROR] Crawl 1 encountered an exception tuple index out of range. This crawl stopped.
+Traceback (most recent call last):
+  File "zhihu.py", line 92, in watch
+    board_entries = self.get_board()
+  File "zhihu.py", line 269, in get_board
+    raise NotImplementedError
+NotImplementedError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "zhihu.py", line 94, in watch
+    if isinstance(e.args[0], requests.Response):
+IndexError: tuple index out of range
+2022-07-15 10:51:11.966 [INFO] Sleep 599.98291182518 second(s)
+2022-07-15 11:41:43.348 [INFO] Settings loaded
+2022-07-15 11:41:43.363 [INFO] Begin crawling ...
+2022-07-15 11:41:44.490 [ERROR] Crawl 2 encountered an exception 'module' object is not callable. This crawl stopped.
+Traceback (most recent call last):
+  File "zhihu.py", line 93, in watch
+    board_entries = self.get_board()
+  File "zhihu.py", line 274, in get_board
+    for data in tqdm(questions):
+TypeError: 'module' object is not callable
+2022-07-15 11:41:44.491 [INFO] Sleep 598.872524023056 second(s)
+2022-07-15 11:51:43.461 [INFO] Begin crawling ...
+2022-07-15 11:51:44.357 [ERROR] Crawl 3 encountered an exception 'module' object is not callable. This crawl stopped.
+Traceback (most recent call last):
+  File "zhihu.py", line 93, in watch
+    board_entries = self.get_board()
+  File "zhihu.py", line 274, in get_board
+    for data in tqdm(questions):
+TypeError: 'module' object is not callable
+2022-07-15 11:51:44.358 [INFO] Sleep 599.1032619476318 second(s)
+2022-07-15 12:01:43.561 [INFO] Begin crawling ...
+2022-07-15 12:01:44.406 [ERROR] Crawl 4 encountered an exception 'module' object is not callable. This crawl stopped.
+Traceback (most recent call last):
+  File "zhihu.py", line 93, in watch
+    board_entries = self.get_board()
+  File "zhihu.py", line 274, in get_board
+    for data in tqdm(questions):
+TypeError: 'module' object is not callable
+2022-07-15 12:01:44.407 [INFO] Sleep 599.1543595790863 second(s)
+2022-07-15 12:11:43.661 [INFO] Begin crawling ...
+2022-07-15 12:11:49.273 [ERROR] Crawl 5 encountered an exception 'module' object is not callable. This crawl stopped.
+Traceback (most recent call last):
+  File "zhihu.py", line 93, in watch
+    board_entries = self.get_board()
+  File "zhihu.py", line 274, in get_board
+    for data in tqdm(questions):
+TypeError: 'module' object is not callable
+2022-07-15 12:11:49.274 [INFO] Sleep 594.3875918388367 second(s)
+2022-07-15 12:21:43.761 [INFO] Begin crawling ...
+2022-07-15 12:21:44.494 [ERROR] Crawl 6 encountered an exception 'module' object is not callable. This crawl stopped.
+Traceback (most recent call last):
+  File "zhihu.py", line 93, in watch
+    board_entries = self.get_board()
+  File "zhihu.py", line 274, in get_board
+    for data in tqdm(questions):
+TypeError: 'module' object is not callable
+2022-07-15 12:21:44.494 [INFO] Sleep 599.2670214176178 second(s)
+2022-07-15 12:31:43.861 [INFO] Begin crawling ...
+2022-07-15 12:31:49.356 [ERROR] Crawl 7 encountered an exception 'module' object is not callable. This crawl stopped.
+Traceback (most recent call last):
+  File "zhihu.py", line 93, in watch
+    board_entries = self.get_board()
+  File "zhihu.py", line 274, in get_board
+    for data in tqdm(questions):
+TypeError: 'module' object is not callable
+2022-07-15 12:31:49.357 [INFO] Sleep 594.5043008327484 second(s)
+2022-07-15 12:41:43.961 [INFO] Begin crawling ...
+2022-07-15 12:41:44.561 [ERROR] Crawl 8 encountered an exception 'module' object is not callable. This crawl stopped.
+Traceback (most recent call last):
+  File "zhihu.py", line 93, in watch
+    board_entries = self.get_board()
+  File "zhihu.py", line 274, in get_board
+    for data in tqdm(questions):
+TypeError: 'module' object is not callable
+2022-07-15 12:41:44.561 [INFO] Sleep 599.3999419212341 second(s)
+2022-07-15 12:51:44.061 [INFO] Begin crawling ...
+2022-07-15 12:51:44.822 [ERROR] Crawl 9 encountered an exception 'module' object is not callable. This crawl stopped.
+Traceback (most recent call last):
+  File "zhihu.py", line 93, in watch
+    board_entries = self.get_board()
+  File "zhihu.py", line 274, in get_board
+    for data in tqdm(questions):
+TypeError: 'module' object is not callable
+2022-07-15 12:51:44.822 [INFO] Sleep 599.238772392273 second(s)
+2022-07-15 13:01:44.161 [INFO] Begin crawling ...
+2022-07-15 13:01:44.959 [ERROR] Crawl 10 encountered an exception 'module' object is not callable. This crawl stopped.
+Traceback (most recent call last):
+  File "zhihu.py", line 93, in watch
+    board_entries = self.get_board()
+  File "zhihu.py", line 274, in get_board
+    for data in tqdm(questions):
+TypeError: 'module' object is not callable
+2022-07-15 13:01:44.960 [INFO] Sleep 599.2014348506927 second(s)
+2022-07-15 13:11:44.261 [INFO] Begin crawling ...
+2022-07-15 13:11:45.166 [ERROR] Crawl 11 encountered an exception 'module' object is not callable. This crawl stopped.
+Traceback (most recent call last):
+  File "zhihu.py", line 93, in watch
+    board_entries = self.get_board()
+  File "zhihu.py", line 274, in get_board
+    for data in tqdm(questions):
+TypeError: 'module' object is not callable
+2022-07-15 13:11:45.166 [INFO] Sleep 599.0952599048615 second(s)
+2022-07-15 13:14:39.586 [INFO] Settings loaded
+2022-07-15 13:14:39.616 [INFO] Begin crawling ...
+2022-07-15 13:14:45.162 [ERROR] Crawl 12 encountered an exception 'module' object is not callable. This crawl stopped.
+Traceback (most recent call last):
+  File "zhihu.py", line 93, in watch
+    board_entries = self.get_board()
+  File "zhihu.py", line 274, in get_board
+    for data in tqdm(questions):
+TypeError: 'module' object is not callable
+2022-07-15 13:14:45.163 [INFO] Sleep 594.4529855251312 second(s)
+2022-07-15 13:16:13.386 [INFO] Settings loaded
+2022-07-15 13:16:13.405 [INFO] Begin crawling ...
+2022-07-15 13:16:14.660 [ERROR] Crawl 13 encountered an exception 'new_pv_yesterday'. This crawl stopped.
+Traceback (most recent call last):
+  File "zhihu.py", line 93, in watch
+    board_entries = self.get_board()
+  File "zhihu.py", line 291, in get_board
+    "heat": question['new_pv_yesterday'],
+KeyError: 'new_pv_yesterday'
+2022-07-15 13:16:14.661 [INFO] Sleep 598.7437088489532 second(s)
+2022-07-15 13:16:59.713 [INFO] Settings loaded
+2022-07-15 13:16:59.729 [INFO] Begin crawling ...
+2022-07-15 13:17:01.038 [ERROR] Crawl 14 encountered an exception 'new_pv_yesterday'. This crawl stopped.
+Traceback (most recent call last):
+  File "zhihu.py", line 93, in watch
+    board_entries = self.get_board()
+  File "zhihu.py", line 291, in get_board
+    "heat": question['new_pv_yesterday'],
+KeyError: 'new_pv_yesterday'
+2022-07-15 13:17:01.039 [INFO] Sleep 598.6904239654541 second(s)
+2022-07-15 13:20:09.363 [INFO] Settings loaded
+2022-07-15 13:20:09.374 [INFO] Begin crawling ...
+2022-07-15 13:20:21.158 [INFO] Get 20 items: 银保监会回应「停贷」事件，称「引导金融机,近日江西上饶一25岁女留学生回县城，称「,2022 年上半年我国 GDP 56.2,如何看待《谭谈交通》争议风波后首案宣判，,马斯克嘲讽特朗普「太老别参选」，特朗普回,四川阆中 1.8 亿元起拍卖食堂 30 ,国家统计局公布各省份二季度及上半年GDP,如何看待中国2022年第二季度GDP?,成都2022.7.12号二批次土拍第一天,比尔·盖茨本月将再捐 200 亿美元，并,从音乐性上说，周杰伦的新专辑《最伟大的作,为什么现在打针都在胳膊上，屁股针几乎见不,中国加班现象普遍而严重的根本原因是什么？,福建一男孩运动后猛喝冰饮去世，如何从医学,如何看待国家卫健委公布 2021 年全国,打架真的会赔很多钱吗？,该不该取消教师每年两个月的带薪休假？,西安住建局称「商业银行擅自拨付监管资金的,乐视回应网传「400 多名员工过着没有『,如何评价话题『一天10万你愿意在太阳下站
+2022-07-15 13:20:21.158 [INFO] Sleep 2 second(s)
+2022-07-15 13:20:23.161 [ERROR] Crawl 15 encountered an exception 'NoneType' object is not subscriptable. This crawl stopped.
+Traceback (most recent call last):
+  File "zhihu.py", line 126, in watch
+    logger.info(f"Get question detail for {item['title']}: raw detail length {len(detail['raw']) if detail['raw'] else 0}")
+TypeError: 'NoneType' object is not subscriptable
+2022-07-15 13:20:23.162 [INFO] Sleep 586.2120923995972 second(s)
+2022-07-15 13:23:44.320 [INFO] Settings loaded
+2022-07-15 13:23:44.343 [INFO] Begin crawling ...
+2022-07-15 13:24:21.909 [INFO] Get 20 items: 银保监会回应「停贷」事件，称「引导金融机,近日江西上饶一25岁女留学生回县城，称「,2022 年上半年我国 GDP 56.2,如何看待《谭谈交通》争议风波后首案宣判，,马斯克嘲讽特朗普「太老别参选」，特朗普回,四川阆中 1.8 亿元起拍卖食堂 30 ,国家统计局公布各省份二季度及上半年GDP,如何看待中国2022年第二季度GDP?,成都2022.7.12号二批次土拍第一天,比尔·盖茨本月将再捐 200 亿美元，并,从音乐性上说，周杰伦的新专辑《最伟大的作,为什么现在打针都在胳膊上，屁股针几乎见不,中国加班现象普遍而严重的根本原因是什么？,福建一男孩运动后猛喝冰饮去世，如何从医学,如何看待国家卫健委公布 2021 年全国,打架真的会赔很多钱吗？,该不该取消教师每年两个月的带薪休假？,西安住建局称「商业银行擅自拨付监管资金的,乐视回应网传「400 多名员工过着没有『,如何评价话题『一天10万你愿意在太阳下站
+2022-07-15 13:24:21.909 [INFO] Sleep 2 second(s)
+2022-07-15 13:24:23.912 [ERROR] Crawl 16 encountered an exception 'NoneType' object is not subscriptable. This crawl stopped.
+Traceback (most recent call last):
+  File "zhihu.py", line 126, in watch
+    logger.info(f"Get question detail for {item['title']}: raw detail length {len(detail['raw']) if detail['raw'] else 0}")
+TypeError: 'NoneType' object is not subscriptable
+2022-07-15 13:24:23.913 [INFO] Sleep 560.4302177429199 second(s)
+2022-07-15 14:09:58.371 [INFO] Settings loaded
+2022-07-15 14:09:58.390 [INFO] Begin crawling ...
+2022-07-15 14:10:00.342 [INFO] Sleep 2 second(s)
+2022-07-15 14:10:07.805 [INFO] Sleep 2 second(s)
+2022-07-15 14:10:10.252 [INFO] Sleep 2 second(s)
+2022-07-15 14:10:12.652 [INFO] Sleep 2 second(s)
+2022-07-15 14:10:15.215 [INFO] Sleep 2 second(s)
+2022-07-15 14:10:18.037 [INFO] Sleep 2 second(s)
+2022-07-15 14:10:20.797 [INFO] Sleep 2 second(s)
+2022-07-15 14:10:23.404 [INFO] Sleep 2 second(s)
+2022-07-15 14:10:26.072 [INFO] Sleep 2 second(s)
+2022-07-15 14:10:28.563 [INFO] Sleep 2 second(s)
+2022-07-15 14:10:31.157 [INFO] Sleep 2 second(s)
+2022-07-15 14:10:33.909 [INFO] Sleep 2 second(s)
+2022-07-15 14:10:36.649 [INFO] Sleep 2 second(s)
+2022-07-15 14:10:39.904 [INFO] Sleep 2 second(s)
+2022-07-15 14:10:42.475 [INFO] Sleep 2 second(s)
+2022-07-15 14:10:45.065 [INFO] Sleep 2 second(s)
+2022-07-15 14:10:47.424 [INFO] Sleep 2 second(s)
+2022-07-15 14:10:50.012 [INFO] Sleep 2 second(s)
+2022-07-15 14:10:52.935 [INFO] Sleep 2 second(s)
+2022-07-15 14:11:00.505 [INFO] Sleep 2 second(s)
+2022-07-15 14:11:02.509 [INFO] Get 20 items: 银保监会回应「停贷」事件，称「引导金融机,近日江西上饶一25岁女留学生回县城，称「,2022 年上半年我国 GDP 56.2,如何看待《谭谈交通》争议风波后首案宣判，,四川阆中 1.8 亿元起拍卖食堂 30 ,马斯克嘲讽特朗普「太老别参选」，特朗普回,如何看待中国2022年第二季度GDP?,如何看待国家卫健委公布 2021 年全国,国家统计局公布各省份二季度及上半年GDP,从音乐性上说，周杰伦的新专辑《最伟大的作,成都2022.7.12号二批次土拍第一天,这个世界上有什么动物长得像P出来的?,福建一男孩运动后猛喝冰饮去世，如何从医学,有没有什么巨爽无比的爽文？,拜登首访中东，普京将访伊朗，释放了什么信,乐视回应网传「400 多名员工过着没有『,该不该取消教师每年两个月的带薪休假？,如何评价话题『一天10万你愿意在太阳下站,为什么现在打针都在胳膊上，屁股针几乎见不,你最佩服你老婆什么？
+2022-07-15 14:11:02.511 [ERROR] Exception @ 
+INSERT INTO record (`qid`, `crawl_id`, `title`, `heat`, `created`, `visitCount`, `followerCount`, `answerCount`,`excerpt`, `raw`, `ranking`, `hit_at`, `url`)
+VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+
+2022-07-15 14:11:02.512 [ERROR] Exception when adding entry not enough arguments for format string
+Traceback (most recent call last):
+  File "zhihu.py", line 109, in watch
+    self.add_entry(crawl_id, idx, item)
+  File "zhihu.py", line 194, in add_entry
+    self.query(
+  File "zhihu.py", line 66, in query
+    cur.execute(sql, args)
+  File "/home/nana/miniconda3/envs/summer_bug/lib/python3.8/site-packages/pymysql/cursors.py", line 146, in execute
+    query = self.mogrify(query, args)
+  File "/home/nana/miniconda3/envs/summer_bug/lib/python3.8/site-packages/pymysql/cursors.py", line 125, in mogrify
+    query = query % self._escape_args(args, conn)
+TypeError: not enough arguments for format string
+2022-07-15 14:11:02.516 [ERROR] Exception @ 
+INSERT INTO record (`qid`, `crawl_id`, `title`, `heat`, `created`, `visitCount`, `followerCount`, `answerCount`,`excerpt`, `raw`, `ranking`, `hit_at`, `url`)
+VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+
+2022-07-15 14:11:02.516 [ERROR] Exception when adding entry not enough arguments for format string
+Traceback (most recent call last):
+  File "zhihu.py", line 109, in watch
+    self.add_entry(crawl_id, idx, item)
+  File "zhihu.py", line 194, in add_entry
+    self.query(
+  File "zhihu.py", line 66, in query
+    cur.execute(sql, args)
+  File "/home/nana/miniconda3/envs/summer_bug/lib/python3.8/site-packages/pymysql/cursors.py", line 146, in execute
+    query = self.mogrify(query, args)
+  File "/home/nana/miniconda3/envs/summer_bug/lib/python3.8/site-packages/pymysql/cursors.py", line 125, in mogrify
+    query = query % self._escape_args(args, conn)
+TypeError: not enough arguments for format string
+2022-07-15 14:11:02.518 [ERROR] Exception @ 
+INSERT INTO record (`qid`, `crawl_id`, `title`, `heat`, `created`, `visitCount`, `followerCount`, `answerCount`,`excerpt`, `raw`, `ranking`, `hit_at`, `url`)
+VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+
+2022-07-15 14:11:02.519 [ERROR] Exception when adding entry not enough arguments for format string
+Traceback (most recent call last):
+  File "zhihu.py", line 109, in watch
+    self.add_entry(crawl_id, idx, item)
+  File "zhihu.py", line 194, in add_entry
+    self.query(
+  File "zhihu.py", line 66, in query
+    cur.execute(sql, args)
+  File "/home/nana/miniconda3/envs/summer_bug/lib/python3.8/site-packages/pymysql/cursors.py", line 146, in execute
+    query = self.mogrify(query, args)
+  File "/home/nana/miniconda3/envs/summer_bug/lib/python3.8/site-packages/pymysql/cursors.py", line 125, in mogrify
+    query = query % self._escape_args(args, conn)
+TypeError: not enough arguments for format string
+2022-07-15 14:11:02.521 [ERROR] Exception @ 
+INSERT INTO record (`qid`, `crawl_id`, `title`, `heat`, `created`, `visitCount`, `followerCount`, `answerCount`,`excerpt`, `raw`, `ranking`, `hit_at`, `url`)
+VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+
+2022-07-15 14:11:02.521 [ERROR] Exception when adding entry not enough arguments for format string
+Traceback (most recent call last):
+  File "zhihu.py", line 109, in watch
+    self.add_entry(crawl_id, idx, item)
+  File "zhihu.py", line 194, in add_entry
+    self.query(
+  File "zhihu.py", line 66, in query
+    cur.execute(sql, args)
+  File "/home/nana/miniconda3/envs/summer_bug/lib/python3.8/site-packages/pymysql/cursors.py", line 146, in execute
+    query = self.mogrify(query, args)
+  File "/home/nana/miniconda3/envs/summer_bug/lib/python3.8/site-packages/pymysql/cursors.py", line 125, in mogrify
+    query = query % self._escape_args(args, conn)
+TypeError: not enough arguments for format string
+2022-07-15 14:11:02.523 [ERROR] Exception @ 
+INSERT INTO record (`qid`, `crawl_id`, `title`, `heat`, `created`, `visitCount`, `followerCount`, `answerCount`,`excerpt`, `raw`, `ranking`, `hit_at`, `url`)
+VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+
+2022-07-15 14:11:02.523 [ERROR] Exception when adding entry not enough arguments for format string
+Traceback (most recent call last):
+  File "zhihu.py", line 109, in watch
+    self.add_entry(crawl_id, idx, item)
+  File "zhihu.py", line 194, in add_entry
+    self.query(
+  File "zhihu.py", line 66, in query
+    cur.execute(sql, args)
+  File "/home/nana/miniconda3/envs/summer_bug/lib/python3.8/site-packages/pymysql/cursors.py", line 146, in execute
+    query = self.mogrify(query, args)
+  File "/home/nana/miniconda3/envs/summer_bug/lib/python3.8/site-packages/pymysql/cursors.py", line 125, in mogrify
+    query = query % self._escape_args(args, conn)
+TypeError: not enough arguments for format string
+2022-07-15 14:11:02.524 [ERROR] Exception @ 
+INSERT INTO record (`qid`, `crawl_id`, `title`, `heat`, `created`, `visitCount`, `followerCount`, `answerCount`,`excerpt`, `raw`, `ranking`, `hit_at`, `url`)
+VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+
+2022-07-15 14:11:02.525 [ERROR] Exception when adding entry not enough arguments for format string
+Traceback (most recent call last):
+  File "zhihu.py", line 109, in watch
+    self.add_entry(crawl_id, idx, item)
+  File "zhihu.py", line 194, in add_entry
+    self.query(
+  File "zhihu.py", line 66, in query
+    cur.execute(sql, args)
+  File "/home/nana/miniconda3/envs/summer_bug/lib/python3.8/site-packages/pymysql/cursors.py", line 146, in execute
+    query = self.mogrify(query, args)
+  File "/home/nana/miniconda3/envs/summer_bug/lib/python3.8/site-packages/pymysql/cursors.py", line 125, in mogrify
+    query = query % self._escape_args(args, conn)
+TypeError: not enough arguments for format string
+2022-07-15 14:11:02.526 [ERROR] Exception @ 
+INSERT INTO record (`qid`, `crawl_id`, `title`, `heat`, `created`, `visitCount`, `followerCount`, `answerCount`,`excerpt`, `raw`, `ranking`, `hit_at`, `url`)
+VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+
+2022-07-15 14:11:02.526 [ERROR] Exception when adding entry not enough arguments for format string
+Traceback (most recent call last):
+  File "zhihu.py", line 109, in watch
+    self.add_entry(crawl_id, idx, item)
+  File "zhihu.py", line 194, in add_entry
+    self.query(
+  File "zhihu.py", line 66, in query
+    cur.execute(sql, args)
+  File "/home/nana/miniconda3/envs/summer_bug/lib/python3.8/site-packages/pymysql/cursors.py", line 146, in execute
+    query = self.mogrify(query, args)
+  File "/home/nana/miniconda3/envs/summer_bug/lib/python3.8/site-packages/pymysql/cursors.py", line 125, in mogrify
+    query = query % self._escape_args(args, conn)
+TypeError: not enough arguments for format string
+2022-07-15 14:11:02.527 [ERROR] Exception @ 
+INSERT INTO record (`qid`, `crawl_id`, `title`, `heat`, `created`, `visitCount`, `followerCount`, `answerCount`,`excerpt`, `raw`, `ranking`, `hit_at`, `url`)
+VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+
+2022-07-15 14:11:02.527 [ERROR] Exception when adding entry not enough arguments for format string
+Traceback (most recent call last):
+  File "zhihu.py", line 109, in watch
+    self.add_entry(crawl_id, idx, item)
+  File "zhihu.py", line 194, in add_entry
+    self.query(
+  File "zhihu.py", line 66, in query
+    cur.execute(sql, args)
+  File "/home/nana/miniconda3/envs/summer_bug/lib/python3.8/site-packages/pymysql/cursors.py", line 146, in execute
+    query = self.mogrify(query, args)
+  File "/home/nana/miniconda3/envs/summer_bug/lib/python3.8/site-packages/pymysql/cursors.py", line 125, in mogrify
+    query = query % self._escape_args(args, conn)
+TypeError: not enough arguments for format string
+2022-07-15 14:11:02.528 [ERROR] Exception @ 
+INSERT INTO record (`qid`, `crawl_id`, `title`, `heat`, `created`, `visitCount`, `followerCount`, `answerCount`,`excerpt`, `raw`, `ranking`, `hit_at`, `url`)
+VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+
+2022-07-15 14:11:02.529 [ERROR] Exception when adding entry not enough arguments for format string
+Traceback (most recent call last):
+  File "zhihu.py", line 109, in watch
+    self.add_entry(crawl_id, idx, item)
+  File "zhihu.py", line 194, in add_entry
+    self.query(
+  File "zhihu.py", line 66, in query
+    cur.execute(sql, args)
+  File "/home/nana/miniconda3/envs/summer_bug/lib/python3.8/site-packages/pymysql/cursors.py", line 146, in execute
+    query = self.mogrify(query, args)
+  File "/home/nana/miniconda3/envs/summer_bug/lib/python3.8/site-packages/pymysql/cursors.py", line 125, in mogrify
+    query = query % self._escape_args(args, conn)
+TypeError: not enough arguments for format string
+2022-07-15 14:11:02.530 [ERROR] Exception @ 
+INSERT INTO record (`qid`, `crawl_id`, `title`, `heat`, `created`, `visitCount`, `followerCount`, `answerCount`,`excerpt`, `raw`, `ranking`, `hit_at`, `url`)
+VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+
+2022-07-15 14:11:02.530 [ERROR] Exception when adding entry not enough arguments for format string
+Traceback (most recent call last):
+  File "zhihu.py", line 109, in watch
+    self.add_entry(crawl_id, idx, item)
+  File "zhihu.py", line 194, in add_entry
+    self.query(
+  File "zhihu.py", line 66, in query
+    cur.execute(sql, args)
+  File "/home/nana/miniconda3/envs/summer_bug/lib/python3.8/site-packages/pymysql/cursors.py", line 146, in execute
+    query = self.mogrify(query, args)
+  File "/home/nana/miniconda3/envs/summer_bug/lib/python3.8/site-packages/pymysql/cursors.py", line 125, in mogrify
+    query = query % self._escape_args(args, conn)
+TypeError: not enough arguments for format string
+2022-07-15 14:11:02.531 [ERROR] Exception @ 
+INSERT INTO record (`qid`, `crawl_id`, `title`, `heat`, `created`, `visitCount`, `followerCount`, `answerCount`,`excerpt`, `raw`, `ranking`, `hit_at`, `url`)
+VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+
+2022-07-15 14:11:02.531 [ERROR] Exception when adding entry not enough arguments for format string
+Traceback (most recent call last):
+  File "zhihu.py", line 109, in watch
+    self.add_entry(crawl_id, idx, item)
+  File "zhihu.py", line 194, in add_entry
+    self.query(
+  File "zhihu.py", line 66, in query
+    cur.execute(sql, args)
+  File "/home/nana/miniconda3/envs/summer_bug/lib/python3.8/site-packages/pymysql/cursors.py", line 146, in execute
+    query = self.mogrify(query, args)
+  File "/home/nana/miniconda3/envs/summer_bug/lib/python3.8/site-packages/pymysql/cursors.py", line 125, in mogrify
+    query = query % self._escape_args(args, conn)
+TypeError: not enough arguments for format string
+2022-07-15 14:11:02.532 [ERROR] Exception @ 
+INSERT INTO record (`qid`, `crawl_id`, `title`, `heat`, `created`, `visitCount`, `followerCount`, `answerCount`,`excerpt`, `raw`, `ranking`, `hit_at`, `url`)
+VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+
+2022-07-15 14:11:02.533 [ERROR] Exception when adding entry not enough arguments for format string
+Traceback (most recent call last):
+  File "zhihu.py", line 109, in watch
+    self.add_entry(crawl_id, idx, item)
+  File "zhihu.py", line 194, in add_entry
+    self.query(
+  File "zhihu.py", line 66, in query
+    cur.execute(sql, args)
+  File "/home/nana/miniconda3/envs/summer_bug/lib/python3.8/site-packages/pymysql/cursors.py", line 146, in execute
+    query = self.mogrify(query, args)
+  File "/home/nana/miniconda3/envs/summer_bug/lib/python3.8/site-packages/pymysql/cursors.py", line 125, in mogrify
+    query = query % self._escape_args(args, conn)
+TypeError: not enough arguments for format string
+2022-07-15 14:11:02.534 [ERROR] Exception @ 
+INSERT INTO record (`qid`, `crawl_id`, `title`, `heat`, `created`, `visitCount`, `followerCount`, `answerCount`,`excerpt`, `raw`, `ranking`, `hit_at`, `url`)
+VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+
+2022-07-15 14:11:02.534 [ERROR] Exception when adding entry not enough arguments for format string
+Traceback (most recent call last):
+  File "zhihu.py", line 109, in watch
+    self.add_entry(crawl_id, idx, item)
+  File "zhihu.py", line 194, in add_entry
+    self.query(
+  File "zhihu.py", line 66, in query
+    cur.execute(sql, args)
+  File "/home/nana/miniconda3/envs/summer_bug/lib/python3.8/site-packages/pymysql/cursors.py", line 146, in execute
+    query = self.mogrify(query, args)
+  File "/home/nana/miniconda3/envs/summer_bug/lib/python3.8/site-packages/pymysql/cursors.py", line 125, in mogrify
+    query = query % self._escape_args(args, conn)
+TypeError: not enough arguments for format string
+2022-07-15 14:11:02.535 [ERROR] Exception @ 
+INSERT INTO record (`qid`, `crawl_id`, `title`, `heat`, `created`, `visitCount`, `followerCount`, `answerCount`,`excerpt`, `raw`, `ranking`, `hit_at`, `url`)
+VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+
+2022-07-15 14:11:02.535 [ERROR] Exception when adding entry not enough arguments for format string
+Traceback (most recent call last):
+  File "zhihu.py", line 109, in watch
+    self.add_entry(crawl_id, idx, item)
+  File "zhihu.py", line 194, in add_entry
+    self.query(
+  File "zhihu.py", line 66, in query
+    cur.execute(sql, args)
+  File "/home/nana/miniconda3/envs/summer_bug/lib/python3.8/site-packages/pymysql/cursors.py", line 146, in execute
+    query = self.mogrify(query, args)
+  File "/home/nana/miniconda3/envs/summer_bug/lib/python3.8/site-packages/pymysql/cursors.py", line 125, in mogrify
+    query = query % self._escape_args(args, conn)
+TypeError: not enough arguments for format string
+2022-07-15 14:11:02.536 [ERROR] Exception @ 
+INSERT INTO record (`qid`, `crawl_id`, `title`, `heat`, `created`, `visitCount`, `followerCount`, `answerCount`,`excerpt`, `raw`, `ranking`, `hit_at`, `url`)
+VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+
+2022-07-15 14:11:02.537 [ERROR] Exception when adding entry not enough arguments for format string
+Traceback (most recent call last):
+  File "zhihu.py", line 109, in watch
+    self.add_entry(crawl_id, idx, item)
+  File "zhihu.py", line 194, in add_entry
+    self.query(
+  File "zhihu.py", line 66, in query
+    cur.execute(sql, args)
+  File "/home/nana/miniconda3/envs/summer_bug/lib/python3.8/site-packages/pymysql/cursors.py", line 146, in execute
+    query = self.mogrify(query, args)
+  File "/home/nana/miniconda3/envs/summer_bug/lib/python3.8/site-packages/pymysql/cursors.py", line 125, in mogrify
+    query = query % self._escape_args(args, conn)
+TypeError: not enough arguments for format string
+2022-07-15 14:11:02.538 [ERROR] Exception @ 
+INSERT INTO record (`qid`, `crawl_id`, `title`, `heat`, `created`, `visitCount`, `followerCount`, `answerCount`,`excerpt`, `raw`, `ranking`, `hit_at`, `url`)
+VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+
+2022-07-15 14:11:02.538 [ERROR] Exception when adding entry not enough arguments for format string
+Traceback (most recent call last):
+  File "zhihu.py", line 109, in watch
+    self.add_entry(crawl_id, idx, item)
+  File "zhihu.py", line 194, in add_entry
+    self.query(
+  File "zhihu.py", line 66, in query
+    cur.execute(sql, args)
+  File "/home/nana/miniconda3/envs/summer_bug/lib/python3.8/site-packages/pymysql/cursors.py", line 146, in execute
+    query = self.mogrify(query, args)
+  File "/home/nana/miniconda3/envs/summer_bug/lib/python3.8/site-packages/pymysql/cursors.py", line 125, in mogrify
+    query = query % self._escape_args(args, conn)
+TypeError: not enough arguments for format string
+2022-07-15 14:11:02.539 [ERROR] Exception @ 
+INSERT INTO record (`qid`, `crawl_id`, `title`, `heat`, `created`, `visitCount`, `followerCount`, `answerCount`,`excerpt`, `raw`, `ranking`, `hit_at`, `url`)
+VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+
+2022-07-15 14:11:02.539 [ERROR] Exception when adding entry not enough arguments for format string
+Traceback (most recent call last):
+  File "zhihu.py", line 109, in watch
+    self.add_entry(crawl_id, idx, item)
+  File "zhihu.py", line 194, in add_entry
+    self.query(
+  File "zhihu.py", line 66, in query
+    cur.execute(sql, args)
+  File "/home/nana/miniconda3/envs/summer_bug/lib/python3.8/site-packages/pymysql/cursors.py", line 146, in execute
+    query = self.mogrify(query, args)
+  File "/home/nana/miniconda3/envs/summer_bug/lib/python3.8/site-packages/pymysql/cursors.py", line 125, in mogrify
+    query = query % self._escape_args(args, conn)
+TypeError: not enough arguments for format string
+2022-07-15 14:11:02.540 [ERROR] Exception @ 
+INSERT INTO record (`qid`, `crawl_id`, `title`, `heat`, `created`, `visitCount`, `followerCount`, `answerCount`,`excerpt`, `raw`, `ranking`, `hit_at`, `url`)
+VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+
+2022-07-15 14:11:02.541 [ERROR] Exception when adding entry not enough arguments for format string
+Traceback (most recent call last):
+  File "zhihu.py", line 109, in watch
+    self.add_entry(crawl_id, idx, item)
+  File "zhihu.py", line 194, in add_entry
+    self.query(
+  File "zhihu.py", line 66, in query
+    cur.execute(sql, args)
+  File "/home/nana/miniconda3/envs/summer_bug/lib/python3.8/site-packages/pymysql/cursors.py", line 146, in execute
+    query = self.mogrify(query, args)
+  File "/home/nana/miniconda3/envs/summer_bug/lib/python3.8/site-packages/pymysql/cursors.py", line 125, in mogrify
+    query = query % self._escape_args(args, conn)
+TypeError: not enough arguments for format string
+2022-07-15 14:11:02.542 [ERROR] Exception @ 
+INSERT INTO record (`qid`, `crawl_id`, `title`, `heat`, `created`, `visitCount`, `followerCount`, `answerCount`,`excerpt`, `raw`, `ranking`, `hit_at`, `url`)
+VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+
+2022-07-15 14:11:02.542 [ERROR] Exception when adding entry not enough arguments for format string
+Traceback (most recent call last):
+  File "zhihu.py", line 109, in watch
+    self.add_entry(crawl_id, idx, item)
+  File "zhihu.py", line 194, in add_entry
+    self.query(
+  File "zhihu.py", line 66, in query
+    cur.execute(sql, args)
+  File "/home/nana/miniconda3/envs/summer_bug/lib/python3.8/site-packages/pymysql/cursors.py", line 146, in execute
+    query = self.mogrify(query, args)
+  File "/home/nana/miniconda3/envs/summer_bug/lib/python3.8/site-packages/pymysql/cursors.py", line 125, in mogrify
+    query = query % self._escape_args(args, conn)
+TypeError: not enough arguments for format string
+2022-07-15 14:11:02.543 [ERROR] Exception @ 
+INSERT INTO record (`qid`, `crawl_id`, `title`, `heat`, `created`, `visitCount`, `followerCount`, `answerCount`,`excerpt`, `raw`, `ranking`, `hit_at`, `url`)
+VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+
+2022-07-15 14:11:02.544 [ERROR] Exception when adding entry not enough arguments for format string
+Traceback (most recent call last):
+  File "zhihu.py", line 109, in watch
+    self.add_entry(crawl_id, idx, item)
+  File "zhihu.py", line 194, in add_entry
+    self.query(
+  File "zhihu.py", line 66, in query
+    cur.execute(sql, args)
+  File "/home/nana/miniconda3/envs/summer_bug/lib/python3.8/site-packages/pymysql/cursors.py", line 146, in execute
+    query = self.mogrify(query, args)
+  File "/home/nana/miniconda3/envs/summer_bug/lib/python3.8/site-packages/pymysql/cursors.py", line 125, in mogrify
+    query = query % self._escape_args(args, conn)
+TypeError: not enough arguments for format string
+2022-07-15 14:11:02.554 [INFO] Sleep 535.8363974094391 second(s)
+2022-07-15 14:12:48.236 [INFO] Settings loaded
+2022-07-15 14:12:48.249 [INFO] Begin crawling ...
+2022-07-15 14:13:00.145 [INFO] Get 20 items: 银保监会回应「停贷」事件，称「引导金融机,近日江西上饶一25岁女留学生回县城，称「,2022 年上半年我国 GDP 56.2,如何看待《谭谈交通》争议风波后首案宣判，,四川阆中 1.8 亿元起拍卖食堂 30 ,马斯克嘲讽特朗普「太老别参选」，特朗普回,如何看待中国2022年第二季度GDP?,如何看待国家卫健委公布 2021 年全国,国家统计局公布各省份二季度及上半年GDP,从音乐性上说，周杰伦的新专辑《最伟大的作,成都2022.7.12号二批次土拍第一天,这个世界上有什么动物长得像P出来的?,福建一男孩运动后猛喝冰饮去世，如何从医学,有没有什么巨爽无比的爽文？,拜登首访中东，普京将访伊朗，释放了什么信,乐视回应网传「400 多名员工过着没有『,该不该取消教师每年两个月的带薪休假？,如何评价话题『一天10万你愿意在太阳下站,为什么现在打针都在胳膊上，屁股针几乎见不,你最佩服你老婆什么？
+2022-07-15 14:13:00.404 [INFO] Sleep 587.8456537723541 second(s)
+2022-07-15 14:28:18.958 [INFO] Settings loaded
+2022-07-15 14:28:18.970 [INFO] Begin crawling ...
+2022-07-15 14:28:20.118 [INFO] Sleep 2 second(s)
+2022-07-15 14:28:22.653 [INFO] Sleep 2 second(s)
+2022-07-15 14:28:25.174 [INFO] Sleep 2 second(s)
+2022-07-15 14:28:27.666 [INFO] Sleep 2 second(s)
+2022-07-15 14:28:30.125 [INFO] Sleep 2 second(s)
+2022-07-15 14:28:37.595 [INFO] Sleep 2 second(s)
+2022-07-15 14:28:40.091 [INFO] Sleep 2 second(s)
+2022-07-15 14:28:42.526 [INFO] Sleep 2 second(s)
+2022-07-15 14:28:45.038 [INFO] Sleep 2 second(s)
+2022-07-15 14:28:47.800 [INFO] Sleep 2 second(s)
+2022-07-15 14:28:50.398 [INFO] Sleep 2 second(s)
+2022-07-15 14:28:52.864 [INFO] Sleep 2 second(s)
+2022-07-15 14:28:55.773 [INFO] Sleep 2 second(s)
+2022-07-15 14:28:58.552 [INFO] Sleep 2 second(s)
+2022-07-15 14:29:01.066 [INFO] Sleep 2 second(s)
+2022-07-15 14:29:03.551 [INFO] Sleep 2 second(s)
+2022-07-15 14:29:06.069 [INFO] Sleep 2 second(s)
+2022-07-15 14:29:08.644 [INFO] Sleep 2 second(s)
+2022-07-15 14:29:11.081 [INFO] Sleep 2 second(s)
+2022-07-15 14:29:18.556 [INFO] Sleep 2 second(s)
+2022-07-15 14:29:20.558 [INFO] Get 20 items: 银保监会回应「停贷」事件，称「引导金融机,近日江西上饶一25岁女留学生回县城，称「,2022 年上半年我国 GDP 56.2,如何看待《谭谈交通》争议风波后首案宣判，,四川阆中 1.8 亿元起拍卖食堂 30 ,马斯克嘲讽特朗普「太老别参选」，特朗普回,如何看待中国2022年第二季度GDP?,如何看待国家卫健委公布 2021 年全国,国家统计局公布各省份二季度及上半年GDP,从音乐性上说，周杰伦的新专辑《最伟大的作,成都2022.7.12号二批次土拍第一天,这个世界上有什么动物长得像P出来的?,福建一男孩运动后猛喝冰饮去世，如何从医学,有没有什么巨爽无比的爽文？,拜登首访中东，普京将访伊朗，释放了什么信,乐视回应网传「400 多名员工过着没有『,该不该取消教师每年两个月的带薪休假？,如何评价话题『一天10万你愿意在太阳下站,为什么现在打针都在胳膊上，屁股针几乎见不,你最佩服你老婆什么？
+2022-07-15 14:29:20.790 [INFO] Sleep 538.179456949234 second(s)
+2022-07-15 14:33:39.318 [INFO] Settings loaded
+2022-07-15 14:33:39.333 [INFO] Begin crawling ...
+2022-07-15 14:33:40.431 [INFO] Get question detail for 银保监会回应「停贷」事件，称「引导金融机构市场化参与风险处置」，会带来哪些影响？: raw detail length 76
+2022-07-15 14:33:40.431 [INFO] Sleep 2 second(s)
+2022-07-15 14:33:48.177 [INFO] Get question detail for 近日江西上饶一25岁女留学生回县城，称「找对象比找工作难100倍」，真实性如何？是什么原因造成？: raw detail length 32
+2022-07-15 14:33:48.177 [INFO] Sleep 2 second(s)
+2022-07-15 14:33:50.796 [INFO] Get question detail for 2022 年上半年我国 GDP 56.2642 万亿元，同比增长 2.5 % ，如何解读？: raw detail length 76
+2022-07-15 14:33:50.796 [INFO] Sleep 2 second(s)
+2022-07-15 14:33:53.351 [INFO] Get question detail for 如何看待《谭谈交通》争议风波后首案宣判，法院认定版权归属成都市广播电视台？: raw detail length 76
+2022-07-15 14:33:53.352 [INFO] Sleep 2 second(s)
+2022-07-15 14:33:56.276 [INFO] Get question detail for 四川阆中 1.8 亿元起拍卖食堂 30 年经营权，涉及 175 家单位，此拍卖交易对企业有何利弊？: raw detail length 76
+2022-07-15 14:33:56.276 [INFO] Sleep 2 second(s)
+2022-07-15 14:33:58.874 [INFO] Get question detail for 马斯克嘲讽特朗普「太老别参选」，特朗普回击「想想当年你在我办公室卑微的模样」，如何解读此言论？: raw detail length 76
+2022-07-15 14:33:58.874 [INFO] Sleep 2 second(s)
+2022-07-15 14:34:01.312 [INFO] Get question detail for 如何看待中国2022年第二季度GDP?: raw detail length 76
+2022-07-15 14:34:01.312 [INFO] Sleep 2 second(s)
+2022-07-15 14:34:03.728 [INFO] Get question detail for 如何看待国家卫健委公布 2021 年全国卫生总费用支出逾 75500 亿元？: raw detail length 76
+2022-07-15 14:34:03.728 [INFO] Sleep 2 second(s)
+2022-07-15 14:34:11.203 [INFO] Get question detail for 国家统计局公布各省份二季度及上半年GDP，如何看待上半年国内GDP同比增长 2.5%？各省情况如何？: raw detail length 76
+2022-07-15 14:34:11.203 [INFO] Sleep 2 second(s)
+2022-07-15 14:34:13.780 [ERROR] Cannot get the raw info of question 从音乐性上说，周杰伦的新专辑《最伟大的作品》是什么水平？
+Traceback (most recent call last):
+  File "zhihu.py", line 271, in get_board
+    excerpt = NULL
+NameError: name 'NULL' is not defined
+2022-07-15 14:34:13.781 [INFO] Get question detail for 从音乐性上说，周杰伦的新专辑《最伟大的作品》是什么水平？: raw detail length 76
+2022-07-15 14:34:13.781 [INFO] Sleep 2 second(s)
+2022-07-15 14:34:21.269 [ERROR] Cannot get the raw info of question 成都2022.7.12号二批次土拍第一天上午就5宗熔断摇号，是否说明成都未来两三年房价是不会再跌了?
+Traceback (most recent call last):
+  File "zhihu.py", line 271, in get_board
+    excerpt = NULL
+NameError: name 'NULL' is not defined
+2022-07-15 14:34:21.270 [INFO] Get question detail for 成都2022.7.12号二批次土拍第一天上午就5宗熔断摇号，是否说明成都未来两三年房价是不会再跌了?: raw detail length 76
+2022-07-15 14:34:21.270 [INFO] Sleep 2 second(s)
+2022-07-15 14:34:23.723 [INFO] Get question detail for 这个世界上有什么动物长得像P出来的?: raw detail length 27
+2022-07-15 14:34:23.723 [INFO] Sleep 2 second(s)
+2022-07-15 14:34:26.331 [INFO] Get question detail for 福建一男孩运动后猛喝冰饮去世，如何从医学角度解读此现象？: raw detail length 76
+2022-07-15 14:34:26.331 [INFO] Sleep 2 second(s)
+2022-07-15 14:34:29.378 [INFO] Get question detail for 有没有什么巨爽无比的爽文？: raw detail length 51
+2022-07-15 14:34:29.379 [INFO] Sleep 2 second(s)
+2022-07-15 14:34:31.821 [INFO] Get question detail for 拜登首访中东，普京将访伊朗，释放了什么信号？这背后反映了两国的哪些意图？: raw detail length 76
+2022-07-15 14:34:31.821 [INFO] Sleep 2 second(s)
+2022-07-15 14:34:34.243 [INFO] Get question detail for 乐视回应网传「400 多名员工过着没有『老板』的神仙日子」等情况基本属实，目前该公司情况如何？: raw detail length 76
+2022-07-15 14:34:34.243 [INFO] Sleep 2 second(s)
+2022-07-15 14:34:36.608 [INFO] Get question detail for 该不该取消教师每年两个月的带薪休假？: raw detail length 61
+2022-07-15 14:34:36.608 [INFO] Sleep 2 second(s)
+2022-07-15 14:34:44.412 [INFO] Get question detail for 如何评价话题『一天10万你愿意在太阳下站着吗』？: raw detail length 4
+2022-07-15 14:34:44.413 [INFO] Sleep 2 second(s)
+2022-07-15 14:34:47.140 [INFO] Get question detail for 为什么现在打针都在胳膊上，屁股针几乎见不到了？: raw detail length 36
+2022-07-15 14:34:47.140 [INFO] Sleep 2 second(s)
+2022-07-15 14:34:49.903 [INFO] Get question detail for 你最佩服你老婆什么？: raw detail length 14
+2022-07-15 14:34:49.903 [INFO] Sleep 2 second(s)
+2022-07-15 14:34:51.905 [INFO] Get 20 items: 银保监会回应「停贷」事件，称「引导金融机,近日江西上饶一25岁女留学生回县城，称「,2022 年上半年我国 GDP 56.2,如何看待《谭谈交通》争议风波后首案宣判，,四川阆中 1.8 亿元起拍卖食堂 30 ,马斯克嘲讽特朗普「太老别参选」，特朗普回,如何看待中国2022年第二季度GDP?,如何看待国家卫健委公布 2021 年全国,国家统计局公布各省份二季度及上半年GDP,从音乐性上说，周杰伦的新专辑《最伟大的作,成都2022.7.12号二批次土拍第一天,这个世界上有什么动物长得像P出来的?,福建一男孩运动后猛喝冰饮去世，如何从医学,有没有什么巨爽无比的爽文？,拜登首访中东，普京将访伊朗，释放了什么信,乐视回应网传「400 多名员工过着没有『,该不该取消教师每年两个月的带薪休假？,如何评价话题『一天10万你愿意在太阳下站,为什么现在打针都在胳膊上，屁股针几乎见不,你最佩服你老婆什么？
+2022-07-15 14:34:52.152 [INFO] Sleep 527.1819472312927 second(s)
+2022-07-15 14:35:13.491 [INFO] Settings loaded
+2022-07-15 14:35:13.511 [INFO] Begin crawling ...
+2022-07-15 14:35:14.510 [INFO] Get question detail for 银保监会回应「停贷」事件，称「引导金融机构市场化参与风险处置」，会带来哪些影响？
+2022-07-15 14:35:14.510 [INFO] Sleep 2 second(s)
+2022-07-15 14:35:17.048 [INFO] Get question detail for 近日江西上饶一25岁女留学生回县城，称「找对象比找工作难100倍」，真实性如何？是什么原因造成？
+2022-07-15 14:35:17.049 [INFO] Sleep 2 second(s)
+2022-07-15 14:35:19.875 [INFO] Get question detail for 2022 年上半年我国 GDP 56.2642 万亿元，同比增长 2.5 % ，如何解读？
+2022-07-15 14:35:19.876 [INFO] Sleep 2 second(s)
+2022-07-15 14:35:22.736 [INFO] Get question detail for 如何看待《谭谈交通》争议风波后首案宣判，法院认定版权归属成都市广播电视台？
+2022-07-15 14:35:22.736 [INFO] Sleep 2 second(s)
+2022-07-15 14:35:25.276 [INFO] Get question detail for 四川阆中 1.8 亿元起拍卖食堂 30 年经营权，涉及 175 家单位，此拍卖交易对企业有何利弊？
+2022-07-15 14:35:25.276 [INFO] Sleep 2 second(s)
+2022-07-15 14:35:27.862 [INFO] Get question detail for 马斯克嘲讽特朗普「太老别参选」，特朗普回击「想想当年你在我办公室卑微的模样」，如何解读此言论？
+2022-07-15 14:35:27.862 [INFO] Sleep 2 second(s)
+2022-07-15 14:35:30.428 [INFO] Get question detail for 如何看待中国2022年第二季度GDP?
+2022-07-15 14:35:30.429 [INFO] Sleep 2 second(s)
+2022-07-15 14:35:33.068 [INFO] Get question detail for 如何看待国家卫健委公布 2021 年全国卫生总费用支出逾 75500 亿元？
+2022-07-15 14:35:33.068 [INFO] Sleep 2 second(s)
+2022-07-15 14:35:35.613 [INFO] Get question detail for 国家统计局公布各省份二季度及上半年GDP，如何看待上半年国内GDP同比增长 2.5%？各省情况如何？
+2022-07-15 14:35:35.614 [INFO] Sleep 2 second(s)
+2022-07-15 14:35:38.086 [INFO] Get question detail for 从音乐性上说，周杰伦的新专辑《最伟大的作品》是什么水平？
+2022-07-15 14:35:38.087 [INFO] Sleep 2 second(s)
+2022-07-15 14:35:40.840 [INFO] Get question detail for 成都2022.7.12号二批次土拍第一天上午就5宗熔断摇号，是否说明成都未来两三年房价是不会再跌了?
+2022-07-15 14:35:40.840 [INFO] Sleep 2 second(s)
+2022-07-15 14:35:44.002 [INFO] Get question detail for 这个世界上有什么动物长得像P出来的?
+2022-07-15 14:35:44.002 [INFO] Sleep 2 second(s)
+2022-07-15 14:35:46.563 [INFO] Get question detail for 福建一男孩运动后猛喝冰饮去世，如何从医学角度解读此现象？
+2022-07-15 14:35:46.563 [INFO] Sleep 2 second(s)
+2022-07-15 14:35:49.707 [INFO] Get question detail for 有没有什么巨爽无比的爽文？
+2022-07-15 14:35:49.707 [INFO] Sleep 2 second(s)
+2022-07-15 14:35:52.461 [INFO] Get question detail for 拜登首访中东，普京将访伊朗，释放了什么信号？这背后反映了两国的哪些意图？
+2022-07-15 14:35:52.462 [INFO] Sleep 2 second(s)
+2022-07-15 14:35:54.885 [INFO] Get question detail for 乐视回应网传「400 多名员工过着没有『老板』的神仙日子」等情况基本属实，目前该公司情况如何？
+2022-07-15 14:35:54.885 [INFO] Sleep 2 second(s)
+2022-07-15 14:35:57.340 [INFO] Get question detail for 该不该取消教师每年两个月的带薪休假？
+2022-07-15 14:35:57.340 [INFO] Sleep 2 second(s)
+2022-07-15 14:35:59.787 [INFO] Get question detail for 如何评价话题『一天10万你愿意在太阳下站着吗』？
+2022-07-15 14:35:59.787 [INFO] Sleep 2 second(s)
+2022-07-15 14:36:02.672 [INFO] Get question detail for 为什么现在打针都在胳膊上，屁股针几乎见不到了？
+2022-07-15 14:36:02.672 [INFO] Sleep 2 second(s)
+2022-07-15 14:36:05.186 [INFO] Get question detail for 你最佩服你老婆什么？
+2022-07-15 14:36:05.187 [INFO] Sleep 2 second(s)
+2022-07-15 14:36:07.189 [INFO] Get 20 items: 银保监会回应「停贷」事件，称「引导金融机,近日江西上饶一25岁女留学生回县城，称「,2022 年上半年我国 GDP 56.2,如何看待《谭谈交通》争议风波后首案宣判，,四川阆中 1.8 亿元起拍卖食堂 30 ,马斯克嘲讽特朗普「太老别参选」，特朗普回,如何看待中国2022年第二季度GDP?,如何看待国家卫健委公布 2021 年全国,国家统计局公布各省份二季度及上半年GDP,从音乐性上说，周杰伦的新专辑《最伟大的作,成都2022.7.12号二批次土拍第一天,这个世界上有什么动物长得像P出来的?,福建一男孩运动后猛喝冰饮去世，如何从医学,有没有什么巨爽无比的爽文？,拜登首访中东，普京将访伊朗，释放了什么信,乐视回应网传「400 多名员工过着没有『,该不该取消教师每年两个月的带薪休假？,如何评价话题『一天10万你愿意在太阳下站,为什么现在打针都在胳膊上，屁股针几乎见不,你最佩服你老婆什么？
+2022-07-15 14:36:07.496 [INFO] Sleep 546.0151362419128 second(s)
+2022-07-15 14:45:13.609 [INFO] Begin crawling ...
+2022-07-15 14:45:14.791 [INFO] Get question detail for 银保监会回应「停贷」事件，称「引导金融机构市场化参与风险处置」，会带来哪些影响？
+2022-07-15 14:45:14.791 [INFO] Sleep 2 second(s)
+2022-07-15 14:45:17.228 [INFO] Get question detail for 近日江西上饶一25岁女留学生回县城，称「找对象比找工作难100倍」，真实性如何？是什么原因造成？
+2022-07-15 14:45:17.228 [INFO] Sleep 2 second(s)
+2022-07-15 14:45:19.728 [INFO] Get question detail for 2022 年上半年我国 GDP 56.2642 万亿元，同比增长 2.5 % ，如何解读？
+2022-07-15 14:45:19.728 [INFO] Sleep 2 second(s)
+2022-07-15 14:45:22.335 [INFO] Get question detail for 如何看待《谭谈交通》争议风波后首案宣判，法院认定版权归属成都市广播电视台？
+2022-07-15 14:45:22.335 [INFO] Sleep 2 second(s)
+2022-07-15 14:45:24.794 [INFO] Get question detail for 四川阆中 1.8 亿元起拍卖食堂 30 年经营权，涉及 175 家单位，此拍卖交易对企业有何利弊？
+2022-07-15 14:45:24.795 [INFO] Sleep 2 second(s)
+2022-07-15 14:45:27.276 [INFO] Get question detail for 马斯克嘲讽特朗普「太老别参选」，特朗普回击「想想当年你在我办公室卑微的模样」，如何解读此言论？
+2022-07-15 14:45:27.277 [INFO] Sleep 2 second(s)
+2022-07-15 14:45:29.701 [INFO] Get question detail for 如何看待中国2022年第二季度GDP?
+2022-07-15 14:45:29.701 [INFO] Sleep 2 second(s)
+2022-07-15 14:45:32.208 [INFO] Get question detail for 如何看待国家卫健委公布 2021 年全国卫生总费用支出逾 75500 亿元？
+2022-07-15 14:45:32.209 [INFO] Sleep 2 second(s)
+2022-07-15 14:45:35.132 [INFO] Get question detail for 国家统计局公布各省份二季度及上半年GDP，如何看待上半年国内GDP同比增长 2.5%？各省情况如何？
+2022-07-15 14:45:35.132 [INFO] Sleep 2 second(s)
+2022-07-15 14:45:37.628 [INFO] Get question detail for 从音乐性上说，周杰伦的新专辑《最伟大的作品》是什么水平？
+2022-07-15 14:45:37.629 [INFO] Sleep 2 second(s)
+2022-07-15 14:45:40.078 [INFO] Get question detail for 成都2022.7.12号二批次土拍第一天上午就5宗熔断摇号，是否说明成都未来两三年房价是不会再跌了?
+2022-07-15 14:45:40.079 [INFO] Sleep 2 second(s)
+2022-07-15 14:45:42.874 [INFO] Get question detail for 这个世界上有什么动物长得像P出来的?
+2022-07-15 14:45:42.874 [INFO] Sleep 2 second(s)
+2022-07-15 14:45:45.397 [INFO] Get question detail for 福建一男孩运动后猛喝冰饮去世，如何从医学角度解读此现象？
+2022-07-15 14:45:45.397 [INFO] Sleep 2 second(s)
+2022-07-15 14:45:48.537 [INFO] Get question detail for 有没有什么巨爽无比的爽文？
+2022-07-15 14:45:48.537 [INFO] Sleep 2 second(s)
+2022-07-15 14:45:50.981 [INFO] Get question detail for 拜登首访中东，普京将访伊朗，释放了什么信号？这背后反映了两国的哪些意图？
+2022-07-15 14:45:50.981 [INFO] Sleep 2 second(s)
+2022-07-15 14:45:53.408 [INFO] Get question detail for 乐视回应网传「400 多名员工过着没有『老板』的神仙日子」等情况基本属实，目前该公司情况如何？
+2022-07-15 14:45:53.408 [INFO] Sleep 2 second(s)
+2022-07-15 14:45:56.289 [INFO] Get question detail for 该不该取消教师每年两个月的带薪休假？
+2022-07-15 14:45:56.289 [INFO] Sleep 2 second(s)
+2022-07-15 14:46:03.905 [INFO] Get question detail for 如何评价话题『一天10万你愿意在太阳下站着吗』？
+2022-07-15 14:46:03.905 [INFO] Sleep 2 second(s)
+2022-07-15 14:46:06.422 [INFO] Get question detail for 为什么现在打针都在胳膊上，屁股针几乎见不到了？
+2022-07-15 14:46:06.422 [INFO] Sleep 2 second(s)
+2022-07-15 14:46:08.868 [INFO] Get question detail for 你最佩服你老婆什么？
+2022-07-15 14:46:08.868 [INFO] Sleep 2 second(s)
+2022-07-15 14:46:10.869 [INFO] Get 20 items: 银保监会回应「停贷」事件，称「引导金融机,近日江西上饶一25岁女留学生回县城，称「,2022 年上半年我国 GDP 56.2,如何看待《谭谈交通》争议风波后首案宣判，,四川阆中 1.8 亿元起拍卖食堂 30 ,马斯克嘲讽特朗普「太老别参选」，特朗普回,如何看待中国2022年第二季度GDP?,如何看待国家卫健委公布 2021 年全国,国家统计局公布各省份二季度及上半年GDP,从音乐性上说，周杰伦的新专辑《最伟大的作,成都2022.7.12号二批次土拍第一天,这个世界上有什么动物长得像P出来的?,福建一男孩运动后猛喝冰饮去世，如何从医学,有没有什么巨爽无比的爽文？,拜登首访中东，普京将访伊朗，释放了什么信,乐视回应网传「400 多名员工过着没有『,该不该取消教师每年两个月的带薪休假？,如何评价话题『一天10万你愿意在太阳下站,为什么现在打针都在胳膊上，屁股针几乎见不,你最佩服你老婆什么？
+2022-07-15 14:46:11.105 [INFO] Sleep 542.5041942596436 second(s)
+2022-07-15 14:49:48.289 [INFO] Settings loaded
+2022-07-15 14:49:48.300 [INFO] Begin crawling ...
+2022-07-15 14:49:50.242 [INFO] Get question detail for 银保监会回应「停贷」事件，称「引导金融机构市场化参与风险处置」，会带来哪些影响？
+2022-07-15 14:49:50.242 [INFO] Sleep 2 second(s)
+2022-07-15 14:49:52.691 [INFO] Get question detail for 近日江西上饶一25岁女留学生回县城，称「找对象比找工作难100倍」，真实性如何？是什么原因造成？
+2022-07-15 14:49:52.692 [INFO] Sleep 2 second(s)
+2022-07-15 14:49:55.229 [INFO] Get question detail for 2022 年上半年我国 GDP 56.2642 万亿元，同比增长 2.5 % ，如何解读？
+2022-07-15 14:49:55.230 [INFO] Sleep 2 second(s)
+2022-07-15 14:49:57.762 [INFO] Get question detail for 如何看待《谭谈交通》争议风波后首案宣判，法院认定版权归属成都市广播电视台？
+2022-07-15 14:49:57.762 [INFO] Sleep 2 second(s)
+2022-07-15 14:50:00.258 [INFO] Get question detail for 四川阆中 1.8 亿元起拍卖食堂 30 年经营权，涉及 175 家单位，此拍卖交易对企业有何利弊？
+2022-07-15 14:50:00.259 [INFO] Sleep 2 second(s)
+2022-07-15 14:50:02.787 [INFO] Get question detail for 马斯克嘲讽特朗普「太老别参选」，特朗普回击「想想当年你在我办公室卑微的模样」，如何解读此言论？
+2022-07-15 14:50:02.787 [INFO] Sleep 2 second(s)
+2022-07-15 14:50:05.383 [INFO] Get question detail for 如何看待中国2022年第二季度GDP?
+2022-07-15 14:50:05.383 [INFO] Sleep 2 second(s)
+2022-07-15 14:50:08.077 [INFO] Get question detail for 如何看待国家卫健委公布 2021 年全国卫生总费用支出逾 75500 亿元？
+2022-07-15 14:50:08.077 [INFO] Sleep 2 second(s)
+2022-07-15 14:50:10.570 [INFO] Get question detail for 国家统计局公布各省份二季度及上半年GDP，如何看待上半年国内GDP同比增长 2.5%？各省情况如何？
+2022-07-15 14:50:10.570 [INFO] Sleep 2 second(s)
+2022-07-15 14:50:13.166 [INFO] Get question detail for 从音乐性上说，周杰伦的新专辑《最伟大的作品》是什么水平？
+2022-07-15 14:50:13.166 [INFO] Sleep 2 second(s)
+2022-07-15 14:50:15.623 [INFO] Get question detail for 成都2022.7.12号二批次土拍第一天上午就5宗熔断摇号，是否说明成都未来两三年房价是不会再跌了?
+2022-07-15 14:50:15.623 [INFO] Sleep 2 second(s)
+2022-07-15 14:50:18.301 [INFO] Get question detail for 这个世界上有什么动物长得像P出来的?
+2022-07-15 14:50:18.301 [INFO] Sleep 2 second(s)

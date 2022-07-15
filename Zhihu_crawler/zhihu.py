@@ -4,6 +4,7 @@ import pymysql
 from bs4 import BeautifulSoup as BS
 import logging
 import time
+from tqdm import tqdm
 
 fmt = '%(asctime)s.%(msecs)03d [%(levelname)s] %(message)s'
 datefmt = '%Y-%m-%d %H:%M:%S'
@@ -102,29 +103,10 @@ class ZhihuCrawler:
 
                 # Process each entry in the hot list
                 for idx, item in enumerate(board_entries):
-                    self.sleep("interval_between_question")
-                    detail = {
-                        "created": None,
-                        "visitCount": None,
-                        "followerCount": None,
-                        "answerCount": None,
-                        "raw": None,
-                        "hit_at": None
-                    }
                     if item["qid"] is None:
                         logger.warning(f"Unparsed URL @ {item['url']} ranking {idx} in crawl {crawl_id}.")
-                    else:
-                        try:
-                            detail = self.get_question(item["qid"])
-                        except Exception as e:
-                            if len(e.args) > 0 and isinstance(e.args[0], requests.Response):
-                                logger.exception(f"{e}; {e.args[0].status_code}; {e.args[0].text}")
-                            else:
-                                logger.exception(f"{str(e)}")
-                        else:
-                            logger.info(f"Get question detail for {item['title']}: raw detail length {len(detail['raw']) if detail['raw'] else 0}")
                     try:
-                        self.add_entry(crawl_id, idx, item, detail)
+                        self.add_entry(crawl_id, idx, item)
                     except Exception as e:
                         logger.exception(f"Exception when adding entry {e}")
                 self.end_crawl(crawl_id)
@@ -160,7 +142,6 @@ CREATE TABLE IF NOT EXISTS `record`  (
     `visitCount` INT,
     `followerCount` INT,
     `answerCount` INT,
-    `excerpt` LONGTEXT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
     `raw` LONGTEXT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci ,
     `url` VARCHAR(255),
     PRIMARY KEY (`id`) USING BTREE,
@@ -196,7 +177,7 @@ UPDATE crawl SET end = %s WHERE id = %s;
 """
         self.query(sql, (time.time(), crawl_id))
 
-    def add_entry(self, crawl_id, idx, board, detail):
+    def add_entry(self, crawl_id, idx, board):
         """
         Add a question entry to database
 
@@ -207,8 +188,8 @@ UPDATE crawl SET end = %s WHERE id = %s;
         """
         sql = \
             """
-INSERT INTO record (`qid`, `crawl_id`, `title`, `heat`, `created`, `visitCount`, `followerCount`, `answerCount`,`excerpt`, `raw`, `ranking`, `hit_at`, `url`)
-VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+INSERT INTO record (`qid`, `crawl_id`, `title`, `heat`, `created`, `visitCount`, `followerCount`, `answerCount`, `raw`, `ranking`, `hit_at`, `url`)
+VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s,  %s, %s, %s);
 """
         self.query(
             sql,
@@ -217,95 +198,105 @@ VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
                 crawl_id,
                 board["title"],
                 board["heat"],
-                detail["created"],
-                detail["visitCount"],
-                detail["followerCount"],
-                detail["answerCount"],
-                board["excerpt"],
-                detail["raw"],
+                board["created"],
+                board["visitCount"],
+                board["followerCount"],
+                board["answerCount"],
+                board["raw"],
                 idx,
-                detail["hit_at"],
+                board["hit_at"],
                 board["url"]
             )
         )
 
     def get_board(self) -> list:
         """
-        TODO: Fetch current hot questions
+        TODO: Fetch current hot questions, And **also the detailed info**
 
         :return: hot question list, ranking from high to low
 
         Return Example:
         [
-            {
-                'title': '针对近期生猪市场非理性行为，国家发展改革委研究投放猪肉储备，此举对市场将产生哪些积极影响？',
-                'heat': '76万热度',
-                'excerpt': '据国家发展改革委微信公众号 7 月 5 日消息，针对近期生猪市场出现盲目压栏惜售等非理性行为，国家发展改革委价格司正研究启动投放中央猪肉储备，并指导地方适时联动投放储备，形成调控合力，防范生猪价格过快上涨。',
-                'url': 'https://www.zhihu.com/question/541600869',
-                'qid': 541600869,
-            },
-            {
-                'title': '有哪些描写夏天的古诗词？',
-                'heat': '41万热度',
-                'excerpt': None,
-                'url': 'https://www.zhihu.com/question/541032225',
-                'qid': 541032225,
-            },
+
             {
                 'title':    # 问题标题
                 'heat':     # 问题热度
-                'excerpt':  # 问题摘要
                 'url':      # 问题网址
                 'qid':      # 问题编号
+                "created": 1657248657,      # 问题的创建时间
+                "followerCount": 5980,      # 问题的关注数量
+                "visitCount": 2139067,      # 问题的浏览次数
+                "answerCount": 2512         # 问题的回答数量
+                "title": "日本前首相安倍      # 问题的标题
+                    晋三胸部中枪已无生命
+                    体征 ，嫌疑人被控制，
+                    目前最新进展如何？背
+                    后原因为何？",
+                "raw": "<p>据央视新闻，        # 问题的详细描述
+                    当地时间8日，日本前
+                    首相安倍晋三当天上午
+                    在奈良发表演讲时中枪
+                    。据悉，安倍晋三在上
+                    救护车时还有意。。。",
+                "hit_at": 1657264954.3134503  # 请求的时间戳
             }
             ...
         ]
         """
 
-        # Hint: - Parse HTML, pay attention to the <section> tag.
-        #       - Use keyword argument `class_` to specify the class of a tag in `find`
-        #       - Hot Question List can be accessed in https://www.zhihu.com/hot
+        # Hint: - using a differnt origin , not the one provided in hint
+        # Cannot get Expert from this origin
+        try:
+            resp = requests.get("https://www.zhihu.com/api/v4/creators/rank/hot?domain=0&period=hour", headers = self.settings["headers"])
+            questions = json.loads(resp.text)["data"]
+        except Exception as e:
+            logger.exception(f"Cannot get the board ")
+            return 
+        
+        
+        fmt_questions = []
 
-        raise NotImplementedError
+        for data in questions:
+            question = data["question"]
+            reaction = data["reaction"]
 
-    def get_question(self, qid: int) -> dict:
-        """
-        TODO: Fetch question info by question ID
+            #excerpt info is not included in the data, so the item is delted
+            hit_at = time.time()
 
-        :param qid: Question ID
-        :return: a dict of question info
+            try:
+                resp = requests.get(question["url"], headers = self.settings["headers"])
+                soup = BS(resp.text,"lxml")
+                excerpt_father = soup.find_all(class_="QuestionRichText QuestionRichText--expandable QuestionRichText--collapsed")
+                if len(excerpt_father) == 0:
+                    excerpt = "None"
+                else:
+                    excerpt = excerpt_father[0].contents[0].contents[0].text
+            except Exception as e:
+                logger.exception(f"Cannot get the raw info of question " + question['title'])
 
-        Return Example:
-        {
-            "created": 1657248657,      # 问题的创建时间
-            "followerCount": 5980,      # 问题的关注数量
-            "visitCount": 2139067,      # 问题的浏览次数
-            "answerCount": 2512         # 问题的回答数量
-            "title": "日本前首相安倍      # 问题的标题
-                晋三胸部中枪已无生命
-                体征 ，嫌疑人被控制，
-                目前最新进展如何？背
-                后原因为何？",
-            "raw": "<p>据央视新闻，        # 问题的详细描述
-                当地时间8日，日本前
-                首相安倍晋三当天上午
-                在奈良发表演讲时中枪
-                。据悉，安倍晋三在上
-                救护车时还有意。。。",
-            "hit_at": 1657264954.3134503  # 请求的时间戳
-        }
+            try:
+                fmt_question = {
+                    "title": question['title'],
+                    "heat": reaction['new_pv_yesterday'],   #这一项似乎就是热度数据
+                    "url": question["url"],
+                    "qid": question["id"],
+                    "created": question["created"],
+                    "followerCount": reaction["follow_num"],
+                    "visitCount": reaction["pv"],
+                    "answerCount": reaction["answer_num"],
+                    "raw": excerpt,
+                    "hit_at": hit_at                          
+                }
+            except Exception as e:
+                logger.exception(f"Cannot format the data of question " + question['title'])
+    
+            fmt_questions.append(fmt_question)
+            logger.info(f"Get question detail for {question['title']}")
+            self.sleep("interval_between_question")
+
+        return fmt_questions
 
 
-        """
-
-        # Hint: - Parse JSON, which is embedded in a <script> and contains all information you need.
-        #       - After find the element in soup, use `.text` attribute to get the inner text
-        #       - Use `json.loads` to convert JSON string to `dict` or `list`
-        #       - You may first save the JSON in a file, format it and locate the info you need
-        #       - Use `time.time()` to create the time stamp
-        #       - Question can be accessed in https://www.zhihu.com/question/<Question ID>
-
-        raise NotImplementedError
 
 if __name__ == "__main__":
     z = ZhihuCrawler()
