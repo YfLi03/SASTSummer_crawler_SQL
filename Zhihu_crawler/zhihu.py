@@ -4,7 +4,6 @@ import pymysql
 from bs4 import BeautifulSoup as BS
 import logging
 import time
-from tqdm import tqdm
 
 fmt = '%(asctime)s.%(msecs)03d [%(levelname)s] %(message)s'
 datefmt = '%Y-%m-%d %H:%M:%S'
@@ -303,5 +302,11 @@ VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s,  %s, %s, %s);
 
 
 if __name__ == "__main__":
+    print("""
+    写完爬虫才发现爬的似乎不是真正的知乎热榜
+    而是发现里面的"热点榜单"
+    由于作者平时看的都是这个,所以爬"错"了
+    不过该练习的都练到了..
+    """)
     z = ZhihuCrawler()
     z.watch()

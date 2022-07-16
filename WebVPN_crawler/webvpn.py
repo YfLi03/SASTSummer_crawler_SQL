@@ -112,8 +112,7 @@ class WebVPN:
 
     def login_info(self):
         """
-        TODO: After successfully logged into WebVPN, login to info.tsinghua.edu.cn
-
+		log in to info 
         :return:
         """
         self.access("info.tsinghua.edu.cn")
@@ -138,12 +137,20 @@ class WebVPN:
         time.sleep(3)  # make sure you're logged in
         self.driver.close()
 
-        # Hint: - Use `access` method to jump to info.tsinghua.edu.cn
-        #       - Use `switch_another` method to change the window handle
-        #       - Wait until the elements are ready, then preform your actions
-        #       - Before return, make sure that you have logged in successfully
 
     def get_grades(self):
+        """
+        Get and calculate the GPA for each semester.
+        Returns courses and GPAs
+        
+        Example print:
+            2020-秋: *.**
+            
+            2021-春: *.**
+
+        return:
+        [{'course_name': '数字娱乐中的媒体技术', 'course_point': '1.0'}, {'course_name': '微积分A(1)', 'course_point': '2.3'}]
+        """
 
         self.access("zhjw.cic.tsinghua.edu.cn/cj.cjCjbAll.do?m=bks_cjdcx&cjdlx=zw")
         time.sleep(1)
@@ -154,6 +161,7 @@ class WebVPN:
         soup = BS(html, "html.parser")
         courses = soup.find_all("tr")
         courses_info = []
+        semesters = {}
 
         for course in courses[1:]:
             gpa = re.search("\d\.\d", course.find_all("td")[4].contents[0])
@@ -161,30 +169,36 @@ class WebVPN:
                 gpa = "N/A"
             else:
                 gpa = gpa.group()
+
+            semester = re.search("\\n.+\d.+\\n",course.find_all("td")[5].contents[0]).group()
+            name = course.find_all("td")[1].contents[0]
+            point = course.find_all("td")[2].contents[0]
+
             course_info = {
-                "course_name": course.find_all("td")[1].contents[0],
+                "course_name": name,
                 "course_grade": gpa
             }
             courses_info.append(course_info)
 
-        for course in courses_info:
-            print(course["course_name"], ": ", course["course_grade"])
+            if semester in semesters:
+                semesters[semester].append([gpa, point])
+            else:
+                semesters[semester] = [[gpa, point]]
+
+
+        for name, semester in semesters.items():
+            point_sum = 0
+            gpa_sum = 0.0
+            for course in semester:
+                if course[0] != "N/A":
+                    gpa_sum += float(course[0])*int(course[1])
+                    point_sum += int(course[1])
+            print (name[:-1], ": ", round(gpa_sum/point_sum,2))
+
+        #for course in courses_info:
+        #    print(course["course_name"], ": ", course["course_grade"])
 
         return courses_info
-
-        """
-        Get and calculate the GPA for each semester.
-        
-        Example print:
-            2020-秋: *.**
-            2021-春: *.**
-            2021-夏: *.**
-            2021-秋: *.**
-            2022-春: *.**
-
-        return:
-        [{'course_name': '数字娱乐中的媒体技术', 'course_point': '1.0'}, {'course_name': '微积分A(1)', 'course_point': '2.3'}]
-        """
 
 
 if __name__ == "__main__":
